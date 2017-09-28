@@ -1,0 +1,36 @@
+#!/usr/bin/python
+
+# walkingUnitsApp - the actual graphical interface class with the buttons and labels and fields
+	#variables
+	# window - contains 1 frame
+	# frame - contains graphical field and buttons
+	# model - instance of the walking units model
+	# graphical field - where things are drawn
+	# enqueue button - runs the enqueue method in the model, passes it a unit
+	# dequeue button - runs the dequeue method in the model
+	# timer - some way of determining when the units move and are redrawn
+	#methods
+	# draw - erase and redraw each unit as its own position on the field.
+
+# walkingUnitsModel - the class that runs the units on the path and changes postions and whatnot.
+	#variables
+	# path - a list of x and y and coordinates
+	# queuedUnits - a linked queue of unit objects
+	# movingUnits - a list of units that are moving
+	#methods
+	# enqueue - makes a unit object and pushes it into queued units
+	# dequeue - pops from the queued units and places it into the moving units list
+	# step - takes a unit, calls next on it's coordinate node
+	# move - calls the step method on every unit is the moving units list, removes units at the end from the list
+	
+# unit - a picture and a set of x and y coordinates
+	#variables
+	# graphic
+	# position - a node containing x and y coordinates
+	#methods
+	# next - node = node.next
+	# get and set graphic
+	# get and set position node
+	# get x and y seperatly
+	
+# utilities - Linked Queue, Node, abstract collection, linked list
