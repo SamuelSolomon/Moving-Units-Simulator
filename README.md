@@ -6,28 +6,28 @@ The project uses linked lists to organize data, and the data classes are seperat
 This is the data model for the walking units, it provides a simple way of keeping track of a list of objects designed to be on a field.
 
     class walkingUnitsModel(object):
-	    def __init__(self):
-		    self._path = LinkedList()
-		    for i in range(500):
-		    	self._path.add(Coordinate(i, i))
-		    self._movingUnits = LinkedList()
-		    self._queuedUnits = LinkedQueue()
+        def __init__(self):
+            self._path = LinkedList()
+            for i in range(500):
+                self._path.add(Coordinate(i, i))
+            self._movingUnits = LinkedList()
+            self._queuedUnits = LinkedQueue()
 		
-	    def makeUnit(self):
-	    	self._queuedUnits.add(Unit(PhotoImage(file = "unitsmall.gif"), self._path.head))
+        def makeUnit(self):
+            self._queuedUnits.add(Unit(PhotoImage(file = "unitsmall.gif"), self._path.head))
 		
-    	def startUnit(self):
-	    	self._movingUnits.add(self._queuedUnits.pop())
+        def startUnit(self):
+            self._movingUnits.add(self._queuedUnits.pop())
 		
-    	def __step(self, unit):
-	    	if not unit._position == None:
-	    		unit._position = unit._position.next
+        def __step(self, unit):
+            if not unit._position == None:
+                unit._position = unit._position.next
 		
-    	def moveAll(self):
-	    	for unit in self._movingUnits:
-	    		self.__step(unit.data)
-	    		if unit.data._position == None:
-		    		self._movingUnits.remove(unit)
+        def moveAll(self):
+            for unit in self._movingUnits:
+            self.__step(unit.data)
+                if unit.data._position == None:
+                    self._movingUnits.remove(unit)
 
 ## Motivation
 This project exists to help me understand how to work with lists of objects and handle them in a way that is computationally simple. It is one more step towards creating bigger and more elaborate programs that I can make a living off of. I completed it as a Final Project for a python course focusing on GUI's and data structures. In time I will need to revisit this project to refine the datahandling system, so please feel free to contribute.
