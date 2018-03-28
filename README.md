@@ -1,7 +1,7 @@
 # walkingUnitsApp
 This is an app that simulates a set of units walking across a coordinate field according to a set of program defined coordinate values.\
 The main() class is located in the walkingUnitsApp file, as well as the bulk of the class files. The user can press a button to make a unit for the queue and then press another button to send that unit along a path from the queue.\
-All the other files in this project are utilities used in the walkingUnitsApp.
+All the other files in this project are utilities used in the walkingUnitsApp. Except for the Planning.txt file, that was my initial plan for how the program needed to be structured.
 ## Synopsis
 The project uses linked lists to organize data, and the data classes are seperated from the GUI classes, any class with the basic information of a unit should be useable within the data model and could be accessed with a proper GUI class.
 
