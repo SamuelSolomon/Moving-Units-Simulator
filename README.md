@@ -1,4 +1,6 @@
 # walkingUnitsApp
+This is an app that simulates a set of units walking across a coordinate field according to a set of program defined coordinate values.\
+The main() class is located in the walkingUnitsApp file, as well as the bulk of the class files. All the other files in this project are utilities used in the walkingUnitsApp.
 ## Synopsis
 The project uses linked lists to organize data, and the data classes are seperated from the GUI classes, any class with the basic information of a unit shold be useable within the data model and could be accessed with a proper GUI class. walkingUnitsApp is the where the program starts. The user can press a button to make a unit for the queue and then press another button to send that unit along a path from the queue.
 
@@ -33,7 +35,7 @@ This is the data model for the walking units, it provides a simple way of keepin
 This project exists to help me understand how to work with lists of objects and handle them in a way that is computationally simple. It is one more step towards creating bigger and more elaborate programs that I can make a living off of. I completed it as a Final Project for a python course focusing on GUI's and data structures. In time I will need to revisit this project to refine the datahandling system, so please feel free to contribute.
 
 ### Problems to fix
-1. Memory management: the program continually allocates memory, this likely occurs because the draw() method never shuts down as it is supposed to. a way to fix it would be seperate the calls to draw to a level above in terms of how the code runs.
+1. Memory management: the program continually allocates memory, this likely occurs because the draw() method in the walkingUnitsApp file never shuts down as it is supposed to. a way to fix it would be seperate the calls to draw to a level above in terms of how the code runs.
 2. Units are not removed correctly from the list of walking units, this contributes to the memory management problem.
 3. Path Class: A more flexible path class would need to be made if this were to be used in a professional program.
 4. The App does not reference the actual values contained in the units path position to determine where it is drawn.
