@@ -1,11 +1,12 @@
 # walkingUnitsApp
 This is an app that simulates a set of units walking across a coordinate field according to a set of program defined coordinate values.\
-The main() class is located in the walkingUnitsApp file, as well as the bulk of the class files. All the other files in this project are utilities used in the walkingUnitsApp.
+The main() class is located in the walkingUnitsApp file, as well as the bulk of the class files. The user can press a button to make a unit for the queue and then press another button to send that unit along a path from the queue.\
+All the other files in this project are utilities used in the walkingUnitsApp.
 ## Synopsis
-The project uses linked lists to organize data, and the data classes are seperated from the GUI classes, any class with the basic information of a unit shold be useable within the data model and could be accessed with a proper GUI class. walkingUnitsApp is the where the program starts. The user can press a button to make a unit for the queue and then press another button to send that unit along a path from the queue.
+The project uses linked lists to organize data, and the data classes are seperated from the GUI classes, any class with the basic information of a unit should be useable within the data model and could be accessed with a proper GUI class.
 
 ## The Data Model
-This is the data model for the walking units, it provides a simple way of keeping track of a list of objects designed to be on a XY coordinate field.
+This is the data model for the walking units, it provides a simple way of keeping track of and updating a list of objects designed to be on a XY coordinate field.
 
     class walkingUnitsModel(object):
         def __init__(self):
